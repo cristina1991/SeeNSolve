@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeeNSolve.Api", "SeeNSolve.Api\SeeNSolve.Api.csproj", "{6E028739-BF21-44B0-AF48-4D84D7E1B81D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeeNSolve.Site", "SeeNSolve.Site\SeeNSolve.Site.csproj", "{66D2F145-EAA5-4B07-BE18-11C5AEC8559A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E028739-BF21-44B0-AF48-4D84D7E1B81D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E028739-BF21-44B0-AF48-4D84D7E1B81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E028739-BF21-44B0-AF48-4D84D7E1B81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E028739-BF21-44B0-AF48-4D84D7E1B81D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66D2F145-EAA5-4B07-BE18-11C5AEC8559A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D2F145-EAA5-4B07-BE18-11C5AEC8559A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D2F145-EAA5-4B07-BE18-11C5AEC8559A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D2F145-EAA5-4B07-BE18-11C5AEC8559A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABA10C73-4CCF-4EB5-80D2-911417E371FF}
+	EndGlobalSection
+EndGlobal

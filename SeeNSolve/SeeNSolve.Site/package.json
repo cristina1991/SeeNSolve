@@ -1,0 +1,18 @@
+{
+  "author": "SeeNSolve Team",
+  "description": "",
+  "devDependencies": {
+    "grunt": "~1.0.2",
+    "grunt-bower-install-simple": "^1.2.4",
+    "grunt-cli": "~1.2.0",
+    "grunt-contrib-concat": "~1.0.1",
+    "grunt-contrib-jshint": "~1.1.0",
+    "grunt-contrib-uglify": "~3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-jscs": "^3.0.1",
+    "jshint": "^2.9.5"
+  },
+  "main": "index.js",
+  "name": "see_n_solve",
+  "version": "1.1.0"
+}
