@@ -509,5 +509,5 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
-RentACar.Site/build/
-RentACar.Site/bower_components/
+SeeNSolve.Site/build/
+SeeNSolve.Site/bower_components/
