@@ -3,7 +3,7 @@
 
     angular.module('app')
         .constant('appSettings', {
-            apiPath: 'http://localhost:65011/'
+            apiPath: 'https://self-service-invoice-service.trusted.nl.wehkamp.dev.blaze.ps/image/'
         })
         .config([
             '$urlRouterProvider', '$stateProvider', '$httpProvider', '$locationProvider',

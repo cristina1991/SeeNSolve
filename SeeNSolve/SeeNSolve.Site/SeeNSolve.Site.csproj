@@ -44,6 +44,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="app\components\googleResource\photo.resource.js" />
+    <Content Include="app\components\googleResource\photo.service.js" />
     <Content Include="app\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="app\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="app\fonts\glyphicons-halflings-regular.woff" />
