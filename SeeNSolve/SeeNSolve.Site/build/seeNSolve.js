@@ -4,7 +4,8 @@
     angular.module('app', [
         'ngResource',
         'ui.router',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'cgBusy'
     ]);
 })();
 (function () {
@@ -83,11 +84,13 @@
         $scope.initHomeCtrl = function () {
 
             $scope.searchTags = function () {
+                $scope.hipelink = "";
+                $scope.arrayToSearchWehkamp = [];
                 var file = document.getElementById("fileUpload").files[0];
-                photoService.upload(file).then(function (response) {
+                $scope.promise = photoService.upload(file).then(function (response) {
                     $scope.mainTag = response.data.splice(0,1)[0];
                     $scope.expectedTags = response.data ;
-                });
+                }); 
             };
            
             $scope.addSearch = function (tagName) {
@@ -110,5 +113,4 @@
 
         };
     });
-
 })();

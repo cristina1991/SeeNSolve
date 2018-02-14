@@ -1,12 +1,32 @@
 ﻿<div ng-init="initHomeCtrl()" class="container">
     <div><p class="lead">See N Solve Photo processing</p></div>
-    <div class="row" style="display: inline-flex;">
+
+    <section id="content2-3" class="content2-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="text-left">
+                        <label for="fileUpload">Choose your Photo</label>
+                        <input type="file" class="form-control-file" id="fileUpload" name="file">
+                    </div>
+                </div>
+                <div cg-busy="promise"></div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <button type="button" class="btn" ng-click="searchTags()">Search matches</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--<div class="row" style="display: inline-flex;">
         <label for="fileUpload">Choose your File</label>
         <input type="file" class="form-control-file" id="fileUpload" name="file">
+        <div cg-busy="promise"></div>
         <button type="button" class="btn" ng-click="searchTags()">Search matches</button>
-    </div>
+    </div>-->
     <div class="row">
-        <input type="button" value="{{mainTag}}" ng-click="addSearch(mainTag)" />
+        <input calss="button btn-lg" type="button" value="{{mainTag}}" ng-click="addSearch(mainTag)" />
     </div>
     <div class="row">
         <div ng-repeat="tagName in expectedTags">
