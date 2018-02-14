@@ -53,7 +53,7 @@
     cursor: pointer;
     padding: 8px;
     font-size: 14px;
-    margin: 8px 0;
+    margin: 8px 8px 8px 0;
 }
 
 .match-tag:hover {
@@ -103,7 +103,7 @@
     border-bottom: none;
 }
 
-.home-description-step img {
+.home-description-step .img {
     width: 100px;
 }
 
@@ -111,4 +111,14 @@
     color: #FD807B;
     font-weight: bold;
     font-size: 50px;
+}
+.allTags {
+    display: inline-grid;
+}
+
+.tag-container {
+    display: inline-flex;
+}
+home-description-step .uploadedFile {
+    width: 15%;
 }

@@ -5,6 +5,8 @@
         'ngResource',
         'ui.router',
         'ui.bootstrap',
-        'cgBusy'
+        'cgBusy',
+        'angular-storage',
+        'naif.base64'
     ]);
 })();

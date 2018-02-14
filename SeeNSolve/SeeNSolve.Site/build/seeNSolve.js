@@ -5,7 +5,9 @@
         'ngResource',
         'ui.router',
         'ui.bootstrap',
-        'cgBusy'
+        'cgBusy',
+        'angular-storage',
+        'naif.base64'
     ]);
 })();
 (function () {
@@ -77,10 +79,11 @@
 (function () {
     'use strict';
 
-    angular.module('app').controller('HomeController', function ($scope, $state, photoService, $window) {
+    angular.module('app').controller('HomeController', function ($scope, $state,
+        photoService, $window, store) {
         $scope.arrayToSearchWehkamp = [];
         $scope.baseHiperlink = "https://www.wehkamp.nl/Winkelen/Search.aspx?Ntt=";
-        
+        $scope.isMainTagPresent = false;
         $scope.initHomeCtrl = function () {
 
             $scope.searchTags = function () {
@@ -88,11 +91,18 @@
                 $scope.arrayToSearchWehkamp = [];
                 var file = document.getElementById("fileUpload").files[0];
                 $scope.promise = photoService.upload(file).then(function (response) {
-                    $scope.mainTag = response.data.splice(0,1)[0];
-                    $scope.expectedTags = response.data ;
+                    $scope.jsonResponse = response.data;
+                    //$scope.arrayToSearchWehkamp.push($scope.jsonResponse.bestMatch[0]);
+                    if (file.name) {
+                        $scope.isFileUploaded = true;
+                        var fileBase64 = $scope.myfile.base64;
+                        $scope.uploadedFile = "data:image/png;base64," + fileBase64;
+                        $scope.isMainTagPresent = true;
+                    }
                 }); 
             };
-           
+
+
             $scope.addSearch = function (tagName) {
                 var concatString = "";
                 var index = $scope.arrayToSearchWehkamp.indexOf(tagName);

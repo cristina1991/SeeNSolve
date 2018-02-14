@@ -46,6 +46,7 @@
   <ItemGroup>
     <Content Include="app\components\googleResource\photo.resource.js" />
     <Content Include="app\components\googleResource\photo.service.js" />
+    <Content Include="app\components\home\home.css" />
     <Content Include="app\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="app\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="app\fonts\glyphicons-halflings-regular.woff" />
