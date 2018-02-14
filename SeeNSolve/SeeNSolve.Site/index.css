@@ -1,0 +1,28 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    background-color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header-container {
+    padding: 16px;
+    border-bottom: 1px solid #aaaaaa;
+    color: #333333;
+}
+.header-title {
+    font-size: 24px;
+    font-weight: 300;
+    position: relative;
+    bottom: 10px;
+    letter-spacing: 2px;
+}
+.header-title span {
+    font-size: 26px;
+    font-weight: 500;
+}
+.icon-header {
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+}

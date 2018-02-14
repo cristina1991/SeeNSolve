@@ -1,59 +1,29 @@
-﻿<div ng-init="initHomeCtrl()" class="container">
-    <div><p class="lead">See N Solve Photo processing</p></div>
-
-    <section id="content2-3" class="content2-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="text-left">
-                        <label for="fileUpload">Choose your Photo</label>
-                        <input type="file" class="form-control-file" id="fileUpload" name="file">
-                    </div>
-                </div>
-                <div cg-busy="promise"></div>
-                <div class="col-md-4">
-                    <div class="text-center">
-                        <button type="button" class="btn" ng-click="searchTags()">Search matches</button>
-                    </div>
+﻿<div ng-init="initHomeCtrl()" class="home-container">
+    <div class="home-description">Photo upload process in 3 simple steps</div>
+    <div class="home-description-steps">
+        <div class="home-description-step">
+            <img src="app/assets/photo_icon.png">
+            <div><span>1 </span>Choose the picture with the unknown item and upload it</div>
+            <input class="file-input" type="file" id="fileUpload" name="file" />
+            <label for="fileUpload">Choose a file</label>
+            <div cg-busy="promise"></div>
+            <button type="button" class="search-button" ng-click="searchTags()">search matches</button>
+        </div>
+        <div class="home-description-step">
+            <img src="app/assets/click_icon.png">
+            <div><span>2 </span>Click on the appropriate tag</div>
+            <input class="match-tag" type="button" value="{{mainTag}}" ng-click="addSearch(mainTag)" />
+            <div class="tag-container" ng-repeat="tagName in expectedTags">
+                <div class="col-sm">
+                    <input class="match-tag" type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
                 </div>
             </div>
         </div>
-    </section>
-    <!--<div class="row" style="display: inline-flex;">
-        <label for="fileUpload">Choose your File</label>
-        <input type="file" class="form-control-file" id="fileUpload" name="file">
-        <div cg-busy="promise"></div>
-        <button type="button" class="btn" ng-click="searchTags()">Search matches</button>
-    </div>-->
-    <div class="row">
-        <input calss="button btn-lg" type="button" value="{{mainTag}}" ng-click="addSearch(mainTag)" />
-    </div>
-    <div class="row">
-        <div ng-repeat="tagName in expectedTags">
-            <div class="col-sm">
-                <input type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
-            </div>
+        <div class="home-description-step">
+            <img src="app/assets/search_icon.png">
+            <div><span>3 </span>Search it in Wehkamp's database</div>
+            <button type="button" class="search-button" ng-click="searchWehkamp()">search Wehkamp</button>
         </div>
     </div>
-    <button type="button" class="btn" ng-click="searchWehkamp()">Search Wehkamp</button>
-
-    <!--<div class="row">
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="..."></iframe>
-        </div>
-    </div>-->
 </div>
 
-
-    <!-- /.container -->
-    <div class="container">
-        <hr>
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; SeeNSolve Team Wehkamp Hackaton 2018</p>
-                </div>
-            </div>
-        </footer>
-    </div>

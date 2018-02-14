@@ -2,21 +2,17 @@
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
-    <title>SeeNSolve Hackaton 2018</title>
+    <title>SeeNSolve</title>
     <link href="bower_components/angular-busy/dist/angular-busy.min.css" rel="stylesheet" />
-    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
-    <link href="app/css/bootstrap.min.css" rel="stylesheet" />
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/icon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link href="app/components/home/home.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
 </head>
+<div class="header-container">
+        <img class="icon-header" src="app/assets/logo.png" />
+        <span class="header-title"><span>See N Solve - </span>Hackathon 2018</span>
+</div>
 <body ng-app="app">
-    <header ng-include="'app/components/Core/nav.html'"></header>
-    <div class="container-fluid">
-        <div ui-view></div>
-    </div>
-
+    <div ui-view></div>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
