@@ -10,54 +10,58 @@
             </div>
 
             <div><span>1 </span>Choose the picture with the unknown item and upload it</div>
-            <input class="file-input" type="file" ng-model="myfile" id="fileUpload" name="file" base-sixty-four-input/>
+            <input class="file-input" type="file" ng-model="myfile" id="fileUpload" name="file" base-sixty-four-input
+                   ng-change="fileUploadVerify(myfile)"/>
             <label for="fileUpload">Choose a file</label>
             <div cg-busy="promise"></div>
-            <button type="button" class="search-button" ng-click="searchTags()">search matches</button>
+            <button type="button" ng-show="isFile" class="search-button" ng-click="searchTags()">search matches</button>
         </div>
         <div class="home-description-step">
             <img class="img" src="app/assets/click_icon.png">
             <div><span>2 </span>Click on the appropriate tag</div>
-            <div class="mainTag">
-                <div ng-show="isMainTagPresent">
-                <input class="match-tag" type="button" value="{{jsonResponse.bestMatch[0]}}" ng-click="addSearch(jsonResponse.bestMatch[0])" />
-                </div>
-            </div>
             <div class="allTags">
-            <div class="tag-container">
-                <div ng-repeat="tagName in jsonResponse.objects">
-                    <div class="col-sm">
-                        <input class="match-tag" type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
+                    <div class="tag-container">
+                        <div ng-repeat="tagName in jsonResponse.bestMatch">
+                            <div class="col-sm">
+                                <!--ng-class="{active : isTagPresentInSearch===tagName}"-->
+                                <input class="match-tagMain" type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
+                            </div>
+                        </div>
+                </div>
+                <div class="tag-container">
+                    <div ng-repeat="tagName in jsonResponse.objects">
+                        <div class="col-sm">
+                            <input class="match-tag" type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
+                        </div>
+                    </div>
+                </div>
+                <div class="tag-container">
+                    <div ng-repeat="tagName in jsonResponse.colors">
+                        <div class="col-sm">
+                            <input class="match-tag" type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
+                        </div>
+                    </div>
+                </div>
+                <div class="tag-container">
+                    <div ng-repeat="tagName in jsonResponse.brands">
+                        <div class="col-sm">
+                            <input class="match-tag" type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
+                        </div>
+                    </div>
+                </div>
+                <div class="tag-container">
+                    <div ng-repeat="tagName in jsonResponse.others">
+                        <div class="col-sm">
+                            <input class="match-tag" type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="tag-container">
-                <div ng-repeat="tagName in jsonResponse.colors">
-                    <div class="col-sm">
-                        <input class="match-tag" type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
-                    </div>
-                </div>
-            </div>
-            <div class="tag-container">
-                <div ng-repeat="tagName in jsonResponse.brands">
-                    <div class="col-sm">
-                        <input class="match-tag" type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
-                    </div>
-                </div>
-            </div>
-            <div class="tag-container">
-                <div ng-repeat="tagName in jsonResponse.others">
-                    <div class="col-sm">
-                        <input class="match-tag" type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
-                    </div>
-                </div>
-            </div>
-          </div>
         </div>
         <div class="home-description-step">
             <img class="img" src="app/assets/search_icon.png">
             <div><span>3 </span>Search it in Wehkamp's database</div>
-            <button type="button" class="search-button" ng-click="searchWehkamp()">search Wehkamp</button>
+            <button type="button" ng-show="isTagPresentInSearch" class="search-button" ng-click="searchWehkamp()">search Wehkamp</button>
         </div>
     </div>
 </div>
