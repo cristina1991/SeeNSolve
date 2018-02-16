@@ -17,6 +17,8 @@
                     $scope.jsonResponse = response.data;
                     if (file.name) {
                         $scope.isMainTagPresent = true;
+                        $scope.choosenTags = "";
+
                     }
                 }); 
             };
@@ -47,9 +49,6 @@
                     }
                 });
                 $scope.hipelink = $scope.baseHiperlink + concatString;
-                if (concatString != '') {
-                    console.log("concatString", concatString);
-                }
             };
 
             $scope.searchWehkamp = function () {
