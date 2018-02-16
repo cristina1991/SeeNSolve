@@ -20,13 +20,12 @@
             <img class="img" src="app/assets/click_icon.png">
             <div><span>2 </span>Click on the appropriate tag</div>
             <div class="allTags">
-                    <div class="tag-container">
-                        <div ng-repeat="tagName in jsonResponse.bestMatch">
-                            <div class="col-sm">
-                                <!--ng-class="{active : isTagPresentInSearch===tagName}"-->
-                                <input class="match-tagMain" type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
-                            </div>
+                <div class="tag-container">
+                    <div ng-repeat="tagName in jsonResponse.bestMatch">
+                        <div class="col-sm">
+                            <input class="match-tagMain" type="button" value="{{tagName}}" ng-click="addSearch(tagName)" />
                         </div>
+                    </div>
                 </div>
                 <div class="tag-container">
                     <div ng-repeat="tagName in jsonResponse.objects">
@@ -56,12 +55,14 @@
                         </div>
                     </div>
                 </div>
+               
             </div>
         </div>
         <div class="home-description-step">
             <img class="img" src="app/assets/search_icon.png">
-            <div><span>3 </span>Search it in Wehkamp's database</div>
+            <div><span>3 </span>Search it on Wehkamp's site</div>
             <button type="button" ng-show="isTagPresentInSearch" class="search-button" ng-click="searchWehkamp()">search Wehkamp</button>
+            <div ng-show="isTagPresentInSearch"><label class="choosenSearchTag">Your search: {{choosenTags}}</label></div>
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 
 .home-container {
-    height: 2000px;
+    height: 100%;
     width: 100%;
     text-align: center;
     background-color: #FAFAFA;
@@ -103,7 +103,7 @@
 }
 
 .home-description-steps {
-    padding-top: 50px;
+    padding-top: 0px;
 }
 
 .home-description-step {
@@ -119,7 +119,7 @@
 }
 
 .home-description-step .img {
-    width: 100px;
+    width: 3%;
 }
 
 .home-description-step span {
@@ -145,4 +145,9 @@ home-description-step .uploadedFile {
 .disabled {
     background: #eee;
     color: #aaa;
+}
+.choosenSearchTag {
+    color: #FD6767;
+    font-weight: bold;
+    font-size: 25px;
 }

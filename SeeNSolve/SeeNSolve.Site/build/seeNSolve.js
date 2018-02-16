@@ -116,7 +116,9 @@
                 } else {
                     $scope.arrayToSearchWehkamp.push(tagName);
                 }
-                angular.forEach($scope.arrayToSearchWehkamp,function (element, index) {
+                $scope.choosenTags = $scope.arrayToSearchWehkamp.toString();
+                angular.forEach($scope.arrayToSearchWehkamp, function (element, index) {
+                   
                     concatString += element + "%20";
                     if (concatString.indexOf(tagName) !== -1) {
                         $scope.isTagPresentInSearch = tagName;
